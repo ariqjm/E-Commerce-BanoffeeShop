@@ -287,18 +287,25 @@
   justify-content: space-between;
 }
 
-.row2 .img-box {
+.service .row3 {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.row2 .img-box,
+.row3 .img-box {
   position: relative;
   max-width: 337px;
 }
 
-.row2 .img-box img {
+.row2 .img-box img,
+.row3 .img-box img {
   width: 100%;
-  /* max-width: 100%; */
-  /* margin: auto; */
 }
 
-.row2 .detail {
+.row2 .detail,
+.row3 .detail {
   position: absolute;
   top: 0;
   left: 0;
@@ -314,12 +321,14 @@
   transition: 0.3s ease-in-out;
 }
 
-.row2 .img-box:hover .detail {
+.row2 .img-box:hover .detail,
+.row3 .img-box:hover .detail {
   clip-path: circle(70.7% at 50% 50%);
   transition: 0.3s ease-in-out;
 }
 
-.row2 .detail a {
+.row2 .detail a,
+.row3 .detail a {
   font-family: var(--heading-font);
   font-weight: 800;
   font-size: 25px;
@@ -456,12 +465,12 @@
   right: 0;
   bottom: 0;
   padding: 25px;
-  background: var(--btn-color);
+  background: yellow;
   border-radius: 30px 0px 50px;
 }
 
 .card-product .btn-card:hover {
-  background-color: white;
+  background-color: var(--btn-color);
 }
 
 .card-product .btn-card i {
@@ -631,6 +640,7 @@
 .contact .btn-contact:hover {
   background-color: white;
   border: 1px solid var(--primary-color);
+  cursor: pointer;
 }
 
 /* Contact End */
@@ -837,7 +847,8 @@
     font-size: 26px;
   }
 
-  .service .row2 {
+  .service .row2,
+  .service .row3 {
     flex-wrap: wrap;
     justify-content: space-around;
   }
